@@ -24,14 +24,7 @@ client.connect(err => {
   const reviewCollection = client.db("creative-agency").collection("reviews");
   const serviceCollection = client.db("creative-agency").collection("services");
   const adminCollection = client.db("creative-agency").collection("admins");
-  //   app.post("/addOrder", (req, res) => {
-  //   const name = req.body;
-  //   userCollection.insertOne(Appointment)
-  //     .then(result => {
-  //       console.log("data added Successfully");
 
-  //     })
-  // })
   app.post('/addOrder', (req, res) => {
     const file = req.files.file;
     const name = req.body.name;
